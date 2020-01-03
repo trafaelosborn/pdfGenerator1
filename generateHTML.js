@@ -170,5 +170,61 @@ function generateHTML(data) {
             zoom: .75; 
           } 
          }
-      </style>`
+      </style>
+      </head>
+
+      <body>
+          
+        <div class="wrapper">
+            <div class="card">
+                <div class="photo-header">
+                <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/caring_for_your_kitten_video/650x350_caring_for_your_kitten_video.jpg" alt="">
+                <h1>Hi</h1>
+                <h1>My Name Is</h1>
+                <h4>Currently @</h4>
+                <div class="links-nav">
+                    <h6 class="nav-link"><i class="fas fa-map-marker-alt"></i> ${res.data.location}</h6>
+                    <a class="nav-link" href="${res.data.html_url}"><i
+                            class="fab fa-github"></i> GitHub</a>
+                    <a class="nav-link" href="${res.data.blog}"><i class="fas fa-rss"></i> Blog</a>
+                </div>
+            </div>
+             
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Followers</h2>
+                        <h3>${res.data.followers}</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <h2>Following</h2>
+                        <h3>${res.data.followers}</h3>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>Followers</h2>
+                        <h3>${res.data.followers}</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <h2>Following</h2>
+                        <h3>${res.data.followers}</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+      </body>
+      `
         }
