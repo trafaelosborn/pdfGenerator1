@@ -1,34 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(data) {
-  const x = data.res.data
-//console.log(x);
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -54,7 +24,7 @@ function generateHTML(data) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[data.color].wrapperBackground};
+         background-color: #E6E1C3;
          padding-top: 100px;
          }
          body {
@@ -96,8 +66,8 @@ function generateHTML(data) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[data.color].headerBackground};
-         color: ${colors[data.color].headerColor};
+         background-color: #C1C72C;
+         color: black;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -151,8 +121,8 @@ function generateHTML(data) {
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[data.color].headerBackground};
-           color: ${colors[data.color].headerColor};
+           background-color: #C1C72C;
+           color: black;
            margin: 20px;
          }
          
@@ -180,15 +150,15 @@ function generateHTML(data) {
         <div class="wrapper">
             <div class="card">
                 <div class="photo-header">
-                <img src="${x.avatar_url}" alt="">
+                <img src="https://avatars3.githubusercontent.com/u/9385814?v=4" alt="">
                 <h1>Hi</h1>
-                <h1>My Name Is ${x.name}</h1>
-                <h4>Currently @ ${x.company}</h4>
+                <h1>My Name Is Christian Eckenrode</h1>
+                <h4>Currently @ Trilogy Education Services</h4>
                 <div class="links-nav">
-                    <h6 class="nav-link"><i class="fas fa-map-marker-alt"></i> ${x.location}</h6>
-                    <a class="nav-link" href="${x.html_url}"><i
+                    <h6 class="nav-link"><i class="fas fa-map-marker-alt"></i> Richmond, Virginia</h6>
+                    <a class="nav-link" href="https://github.com/ceckenrode"><i
                             class="fab fa-github"></i> GitHub</a>
-                    <a class="nav-link" href="${x.blog}"><i class="fas fa-rss"></i> Blog</a>
+                    <a class="nav-link" href="https://eck.im/twitter"><i class="fas fa-rss"></i> Blog</a>
                 </div>
             </div>
              
@@ -196,14 +166,14 @@ function generateHTML(data) {
                 <div class="col">
                     <div class="card">
                         <h2>Followers</h2>
-                        <h3>${x.following}</h3>
+                        <h3>71</h3>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
                         <h2>Following</h2>
-                        <h3>${x.followers}</h3>
+                        <h3>106</h3>
                     </div>
                 </div>
                 
@@ -213,14 +183,14 @@ function generateHTML(data) {
                 <div class="col">
                     <div class="card">
                         <h2>Repositories</h2>
-                        <h3>${x.public_repos}</h3>
+                        <h3>136</h3>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
                         <h2>Following</h2>
-                        <h3>${x.following}</h3>
+                        <h3>71</h3>
                     </div>
                 </div>
             </div>
@@ -228,8 +198,3 @@ function generateHTML(data) {
         </div>
 
       </body>
-`
-        }
-  
-        
-        module.exports = generateHTML;
